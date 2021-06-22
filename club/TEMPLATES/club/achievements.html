@@ -1,0 +1,11 @@
+{% extends "club/base.html" %}
+{% block content %}
+{% for achieve in achievements %}
+<div class="container">
+    <img src="{{ achieve.image.url }}" alt="No Image">
+    <a href="#">{{ achieve.title }}</a>
+    <p>{{ achieve.content }}</p>
+    <p>posted on {{achieve.date|date:"F,d,Y"}}</p>
+</div>
+{% endfor %}
+{% endblock %}
