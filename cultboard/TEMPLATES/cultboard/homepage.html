@@ -1,0 +1,11 @@
+{% extends "cultboard/base.html" %}
+{% block title %}
+    <title>Home Page</title>
+{% endblock %}
+{% block content %}
+    {% for note in welcome_note %}
+        <h3>{{ note.title }}</h3>
+        <p>{{ note.note }}</p>
+        <br>
+    {% endfor %}
+{% endblock %}
